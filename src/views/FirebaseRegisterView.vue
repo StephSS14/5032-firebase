@@ -14,6 +14,13 @@
         />
       </p>
       <p>
+        <select class="form-select my-2" v-model="role">
+          <option disabled value="">Select Role</option>
+          <option>Staff</option>
+          <option>Student</option>
+        </select>
+      </p>
+      <p>
         <button class="btn btn-primary w-100" @click="register">Save to Firebase</button>
       </p>
     </div>
@@ -28,6 +35,7 @@ import { useRouter } from 'vue-router'
 const email = ref('')
 const password = ref('')
 const router = useRouter()
+const role = ref('')
 const auth = getAuth()
 const register = () => {
   createUserWithEmailAndPassword(auth, email.value, password.value)
