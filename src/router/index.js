@@ -5,6 +5,8 @@ import LogInView from '@/views/LogInView.vue'
 import AccessDenied from '@/views/AccessDenied.vue'
 import LogOut from '@/views/LogOut.vue'
 import { isAuthenticated } from '@/states/global'
+import FirebaseSigninView from '@/views/FirebaseSigninView.vue'
+import FirebaseRegisterView from '@/views/FirebaseRegisterView.vue'
 
 const routes = [
   {
@@ -33,6 +35,16 @@ const routes = [
     name: 'Logout',
     component: LogOut,
     meta: { requiresAuth: true }
+  },
+  {
+    path: '/FireLogin',
+    name: 'FireLogin',
+    component: FirebaseSigninView
+  },
+  {
+    path: '/FireRegister',
+    name: 'FireRegister',
+    component: FirebaseRegisterView
   }
 ]
 
