@@ -51,7 +51,7 @@ export default {
         })
         isbn.value = ''
         name.value = ''
-        alert('Book added successfully!')
+        alert('Book added successfully! something change')
       } catch (error) {
         console.error('Error adding book: ', error)
       }
